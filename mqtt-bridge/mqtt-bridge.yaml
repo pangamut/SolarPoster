@@ -1,0 +1,13 @@
+# mqtt-bridge config
+broker: "10.1.1.54"
+port: 1883
+
+topic: "solar/#"
+measurement: "mqtt_consumer"
+
+post_url: "http://10.1.5.38/influx.php"   # calvin LXC
+post_interval: 30      # seconds between flushes
+post_timeout: 10
+post_retries: 2
+keepalive: 60
+verbose: false
